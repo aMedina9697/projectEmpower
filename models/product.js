@@ -23,6 +23,13 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: false
       }
     });
+    Product.associate = function (models) {
+        Product.belongsTo(models.User, {
+          foreignKey: {
+            allowNull: true
+          }
+        });
+      };
     console.log(Product);
     return Product;
   };
