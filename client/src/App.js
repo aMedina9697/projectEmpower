@@ -1,31 +1,57 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import axios from 'axios'
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import NavTabs from "./NavTabs";
+import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
+import Profile from "./pages/Profile";
+import Products from "./pages/Products";
+import Notes from "./pages/Notes";
 
-class App extends Component {
-  state = {
-    "testValue": "getting..."
-  }
-  componentDidMount() {
-    console.log("Mounting App");
-    axios.get("/api/test", (result) => {
-      console.log(result);
-    })
-  }
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          The test value is: {this.state.testValue}
-        </p>
+
+function App() {
+  return (
+    <Router>
+      <div>
+        <NavTabs />
+        <Route exact path="/" component={SignUp} />
+        <Route exact path="/Login" component={Login} />
+        <Route exact path="/Profile" component={Profile} />
+        <Route exact path="/Products" component={Products} />
+        <Route exact path="/Notes" component={Notes} />
       </div>
-    );
-  }
+    </Router>
+  );
 }
 
 export default App;
+
+
+
+/*let eyesPic = document.createElement("img");
+eyesPic.src = "../assets/eyes.png";
+let browsPic = document.createElement("img");
+browsPic.src = "../assets/brows.png";
+let lipsPic = document.createElement("img");
+lipsPic.src = "../assets/lips.png";
+let nosePic = document.createElement("img");
+nosePic.src= "../assets/nose.png";
+
+function Face() {
+return(
+
+<div class="main-body">
+<div id= "browsBox"></div>
+<div id= "eyesBox"></div>
+<div id= "noseBox"></div>
+<div id= "lipsBox"></div>
+</div>
+)};
+
+Face();
+
+$("browsBox").append("browsPic");
+$("eyesBox").append("eyesPic");
+$("noseBox").append("nosePic");
+$("lipsBox").append("lipsPic");
+
+ */
