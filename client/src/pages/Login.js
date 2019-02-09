@@ -1,3 +1,8 @@
+import React from "react";
+
+function Login() {
+  return (
+    /*
 $(document).ready(function () {
     // Getting references to our form and inputs
     var loginForm = $("form.login");
@@ -36,3 +41,9 @@ $(document).ready(function () {
     }
 
 });
+*/
+<div></div>
+  );
+}
+
+export default Login;
