@@ -1,10 +1,23 @@
-.main-body {
+body {
+    background-color: #9bc0c1;
+}
+
+.mainBody {
     width: 100%;
     height: 100%;
     background-color: #9bc0c1;
 }
 
-#browsBox {
+#foreheadCircle {
+    text-align: center;
+    color: #5d576b;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+}
+
+#browsPic {
     position: relative;
     display: block;
     margin-left: auto;
@@ -12,7 +25,7 @@
     width: 80%;
 }
 
-#eyesBox {
+#eyesPic {
     position: relative;
     display: block;
     margin-left: auto;
@@ -20,7 +33,7 @@
     width: 80%;
 }
 
-#noseBox {
+#nosePic {
     position: relative;
     display: block;
     margin-left: auto;
@@ -28,10 +41,17 @@
     width: 25%;
 }
 
-#lipsBox {
-    position: relative;
+#cheekCircle {
+    color: #5d576b;
+    height: 100px;
+    float: right;
+    font-size: 30px;
+    margin-right: 25%;
+}
+
+#lipsPic {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 33%;
+    margin-right: 34%;
     width: 33%;
 }

@@ -1,21 +1,25 @@
-import React from "react";
+import React, { Component } from "react";
+import "../styles/profile.css";
+import brows from "../assets/brows.png";
+import eyes from "../assets/eyes.png";
+import nose from "../assets/nose.png";
+import lips from "../assets/lips.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function Profile() {
-  return (
-    <div>
-      <h1>Hello homies!!! Success!!</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque velit, lobortis ut magna
-        varius, blandit rhoncus sem. Morbi lacinia nisi ac dui fermentum, sed luctus urna tincidunt.
-        Etiam ut feugiat ex. Cras non risus mi. Curabitur mattis rutrum ipsum, ut aliquet urna
-        imperdiet ac. Sed nec nulla aliquam, bibendum odio eget, vestibulum tortor. Cras rutrum
-        ligula in tincidunt commodo. Morbi sit amet mollis orci, in tristique ex. Donec nec ornare
-        elit. Donec blandit est sed risus feugiat porttitor. Vestibulum molestie hendrerit massa non
-        consequat. Vestibulum vitae lorem tortor. In elementum ultricies tempus. Interdum et
-        malesuada fames ac ante ipsum primis in faucibus.
-      </p>
+class Profile extends Component {
+  render() {
+    return <div className= "mainBody">
+     <div id="foreheadCircle"><FontAwesomeIcon icon="circle" /></div>
+     <img src={brows} id ="browsPic" alt="eyebrows"/>
+     <img src={eyes} id ="eyesPic" alt="eyes"/>
+     <img src={nose} id ="nosePic" alt="nose"/> 
+     <div id="cheekCircle"><FontAwesomeIcon icon="circle" /></div>
+     <br/>
+     <br/>
+     <img src={lips} id ="lipsPic" alt="lips"/>
+     
     </div>
-  );
+  }
 }
 
 export default Profile;

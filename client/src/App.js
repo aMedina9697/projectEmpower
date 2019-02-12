@@ -6,6 +6,11 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Products from "./pages/Products";
 import Notes from "./pages/Notes";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faCircle)
 
 
 function App() {
