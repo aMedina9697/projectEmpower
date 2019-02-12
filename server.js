@@ -5,11 +5,16 @@ const app = express();
 var cheerio = require("cheerio");
 // Makes HTTP request for HTML page
 var axios = require("axios");
+const helmet = require('helmet');
+const morgan = require('morgan');
 
-
+// enhance your app security with Helmet
+app.use(helmet());
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// log HTTP requests
+app.use(morgan('combined'));
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
