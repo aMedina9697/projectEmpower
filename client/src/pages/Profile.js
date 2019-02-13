@@ -33,4 +33,20 @@ class Profile extends Component {
   }
 }
 
+//this should show products for brows or whatever prodcut we have 
+// $(".browsPic-view").on("click", function (browsPic) {
+//   var id = $(this).data("id");
+
+//   // Send the GET request.
+//   $.ajax("/api/face/" + id, {
+//       type: "GET"
+//   }).then(
+//       function () {
+//           console.log("viewing", id);
+//           // Reload the page to get the updated list
+//           location.reload();
+//       }
+//   );
+// });
+
 export default Profile;
