@@ -34,19 +34,19 @@ app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
 // SCRAPING BRAND OF ULTA FACE PRODUCTS 
-console.log("scrapping ulta" );
-axios.get("https://www.ulta.com/makeup-face?N=26y3").then(function(response) {
-  var $ = cheerio.load(response.data);
-  var results = [];
-  $("h4.prod-title").each(function(i, element) {
-    var title = $(element).text();
-    title = title.substr(9, 12);
-     var link = $(element).children().attr("href");
-    results.push({
-      title: title,
-      link: link
-    });
-  });
-  console.log(results);
-});
+// console.log("scrapping ulta" );
+// axios.get("https://www.ulta.com/makeup-face?N=26y3").then(function(response) {
+//   var $ = cheerio.load(response.data);
+//   var results = [];
+//   $("h4.prod-title").each(function(i, element) {
+//     var title = $(element).text();
+//     title = title.substr(9, 12);
+//      var link = $(element).children().attr("href");
+//     results.push({
+//       title: title,
+//       link: link
+//     });
+//   });
+//   console.log(results);
+// });
 
