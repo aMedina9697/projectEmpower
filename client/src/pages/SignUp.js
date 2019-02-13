@@ -1,22 +1,49 @@
-import React from "react";
+import React, { Component } from "react";
 import "../styles/profile.css";
 
-function SignUp() {
-  return (
-    <div>
-      <h1>Hello homies!!! Success!!</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque velit, lobortis ut magna
-        varius, blandit rhoncus sem. Morbi lacinia nisi ac dui fermentum, sed luctus urna tincidunt.
-        Etiam ut feugiat ex. Cras non risus mi. Curabitur mattis rutrum ipsum, ut aliquet urna
-        imperdiet ac. Sed nec nulla aliquam, bibendum odio eget, vestibulum tortor. Cras rutrum
-        ligula in tincidunt commodo. Morbi sit amet mollis orci, in tristique ex. Donec nec ornare
-        elit. Donec blandit est sed risus feugiat porttitor. Vestibulum molestie hendrerit massa non
-        consequat. Vestibulum vitae lorem tortor. In elementum ultricies tempus. Interdum et
-        malesuada fames ac ante ipsum primis in faucibus.
-      </p>
-    </div>
-  );
+class SignUp extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      acceptedTerms: false,
+      email: '',
+    };
+  }
+
+  updateCheckbox(checked) {
+    this.setState({
+      acceptedTerms: checked,
+    });
+  }
+
+  updateEmail(value) {
+    this.setState({
+      email: value,
+    });
+  }
+
+  submit() {
+    // ... use email and acceptedTerms in an ajax request or similar ...
+  }
+
+  render() {
+    return (
+      <form>
+        <input
+          type="email"
+          onChange={(event) => {this.updateEmail(event.target.value)}}
+          value={this.state.email}
+        />
+        <input
+            type="checkbox"
+            checked={this.state.acceptedTerms}
+            onChange={(event) => {this.updateCheckbox(event.target.checked)}}
+          />
+        <button onClick={() => {this.submit()}}>Submit</button>
+      </form>
+    )
+  }
 }
 
 export default SignUp;

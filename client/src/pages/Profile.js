@@ -7,9 +7,20 @@ import lips from "../assets/lips.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Profile extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: {
+        name: 'Bruno Krebs',
+        picture: 'https://cdn.auth0.com/blog/profile-picture/bruno-krebs.png',
+      },
+    };
+  }
+
   render() {
     return <div className= "mainBody">
-     <div id="foreheadCircle"><FontAwesomeIcon icon="circle" /></div>
+    (
+      <div id="foreheadCircle"><FontAwesomeIcon icon="circle" /></div>
      <img src={brows} id ="browsPic" alt="eyebrows"/>
      <img src={eyes} id ="eyesPic" alt="eyes"/>
      <img src={nose} id ="nosePic" alt="nose"/> 
@@ -17,7 +28,7 @@ class Profile extends Component {
      <br/>
      <br/>
      <img src={lips} id ="lipsPic" alt="lips"/>
-     
+    );
     </div>
   }
 }
