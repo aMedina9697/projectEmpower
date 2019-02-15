@@ -20,15 +20,20 @@ class Profile extends Component {
   render() {
     return <div className= "mainBody">
     (
-      <div id="foreheadCircle"><FontAwesomeIcon icon="circle" /></div>
+      <div id="foreheadCircle"><FontAwesomeIcon icon="star" /></div>
+      <br/>
+      <br/>
      <img src={brows} id ="browsPic" alt="eyebrows"/>
+     <br/>
      <img src={eyes} id ="eyesPic" alt="eyes"/>
+     <br/>
+     <br/>
      <img src={nose} id ="nosePic" alt="nose"/> 
-     <div id="cheekCircle"><FontAwesomeIcon icon="circle" /></div>
+     <div id="cheekCircle"><FontAwesomeIcon icon="star" /></div>
      <br/>
      <br/>
      <img src={lips} id ="lipsPic" alt="lips"/>
-    );
+    )
     </div>
   }
 }
