@@ -11,6 +11,4 @@ var cheerio = require('cheerio');
 
 router.use('/product', require('./product'));
 
-
-
 module.exports = router;
