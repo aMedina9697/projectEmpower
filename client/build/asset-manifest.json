@@ -1,11 +1,12 @@
 {
   "runtime~main.js": "/static/js/runtime~main.41117e05.js",
   "runtime~main.js.map": "/static/js/runtime~main.41117e05.js.map",
-  "vendors.js": "/static/js/vendors.cc53e7a7.chunk.js",
-  "vendors.js.map": "/static/js/vendors.cc53e7a7.chunk.js.map",
-  "main.css": "/static/css/main.24c77f57.chunk.css",
-  "main.js": "/static/js/main.c252c488.chunk.js",
-  "main.js.map": "/static/js/main.c252c488.chunk.js.map",
-  "static/media/logo.svg": "/static/media/logo.495d93cc.svg",
+  "vendors.js": "/static/js/vendors.d99dfc2c.chunk.js",
+  "vendors.js.map": "/static/js/vendors.d99dfc2c.chunk.js.map",
+  "main.css": "/static/css/main.d7e9871b.chunk.css",
+  "main.js": "/static/js/main.f11c20fc.chunk.js",
+  "main.js.map": "/static/js/main.f11c20fc.chunk.js.map",
+  "static/media/lips.png": "/static/media/lips.f29041f0.png",
+  "static/media/eyes.png": "/static/media/eyes.d1dd0ee5.png",
   "index.html": "/index.html"
 }
