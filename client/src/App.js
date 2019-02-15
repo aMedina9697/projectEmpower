@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavTabs from "./NavTabs";
-import SignUp from "./pages/SignUp";
-import Login from "./pages/Login";
+import Login from './components/Login'
 import Profile from "./pages/Profile";
+import logo from './logo.svg';
 import Products from "./pages/Products";
 import Notes from "./pages/Notes";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -11,27 +11,45 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faCircle)
+import AuthService from './components/AuthService';
+import withAuth from './components/withAuth';
+const Auth = new AuthService();
 
+library.add(faCircle);
 
-function App() {
-  return (
-    <Router>
-      <div>
-        <NavTabs />
-        <Route exact path="/" component={SignUp} />
-        <Route exact path="/Login" component={Login} />
-        <Route exact path="/Profile" component={Profile} />
-        <Route exact path="/Products" component={Products} />
-        <Route exact path="/Notes" component={Notes} />
+class App extends Component {
+
+  handleLogout(){
+    Auth.logout()
+    this.props.history.replace('/login');
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>Welcome {this.props.user.username}</h2>
+        </div>
+        <p className="App-intro">
+          <button type="button" className="form-submit" onClick={this.handleLogout.bind(this)}>Logout</button>
+        </p>
+        <Router>
+          <div>
+            <NavTabs />
+            <Route exact path="/Login" component={Login} />
+            <Route exact path="/Profile" component={Profile} />
+            <Route exact path="/Products" component={Products} />
+            <Route exact path="/Notes" component={Notes} />
+          </div>
+          </Router>
       </div>
-    </Router>
-  );
+    );
+  }
 }
 
-export default App;
 
-
+export default withAuth(App);
 
 /*let eyesPic = document.createElement("img");
 eyesPic.src = "../assets/eyes.png";
