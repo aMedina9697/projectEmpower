@@ -1,11 +1,21 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-import {BrowserRouter} from 'react-router-dom';
-import * as registerServiceWorker from './registerServiceWorker';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 
-ReactDOM.render(<BrowserRouter>
-<App />
-</BrowserRouter>, document.getElementById("root"));
+// Our Components
+import Login from './components/Login';
 
-registerServiceWorker.unregister();
+ReactDOM.render(
+    <Router>
+        <div>
+            <Route exact path="/" component={App} />
+            <Route exact path="/login" component={Login} />
+        </div>
+    </Router>
+    , document.getElementById('root')
+);
+registerServiceWorker();
