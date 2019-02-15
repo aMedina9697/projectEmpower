@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import NavTabs from "./NavTabs";
+import NavTabs from "./pages/NavTabs";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
@@ -10,6 +10,11 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 // eslint-disable-next-line
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faSmileWink, faPlus, faComment } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faSmileWink)
+library.add(faPlus)
+library.add(faComment)
 
 library.add(faStar)
 
