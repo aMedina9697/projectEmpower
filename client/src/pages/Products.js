@@ -86,6 +86,11 @@ class Products extends Component {
               >
                 Submit Note
               </FormBtn>
+              <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
             </form>
           </Col>
           <Col size="md-6 sm-12">
