@@ -1,4 +1,4 @@
-# Hello Beautiful
+# Hello Gorgeous
 
 ## About This App
 
