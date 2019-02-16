@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import {BrowserRouter} from 'react-router-dom';
-import * as registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from "./registerServiceWorker";
+import Firebase, { FirebaseContext } from './components/Firebase';
 
-ReactDOM.render(<BrowserRouter>
+ReactDOM.render(<FirebaseContext.Provider value={new Firebase()}>
 <App />
-</BrowserRouter>, document.getElementById("root"));
-
-registerServiceWorker.unregister();
+</FirebaseContext.Provider>, document.getElementById("root"));
+registerServiceWorker();
