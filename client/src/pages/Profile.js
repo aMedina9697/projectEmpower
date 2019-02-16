@@ -18,8 +18,8 @@ class Profile extends Component {
   }
 
   render() {
-    return <div className= "mainBody">
-    (
+    return (
+            <div className= "mainBody">
       <div id="foreheadCircle"><FontAwesomeIcon icon="star" /></div>
       <br/>
       <br/>
@@ -33,8 +33,9 @@ class Profile extends Component {
      <br/>
      <br/>
      <img src={lips} id ="lipsPic" alt="lips"/>
+     </div>
     )
-    </div>
+    
   }
 }
 

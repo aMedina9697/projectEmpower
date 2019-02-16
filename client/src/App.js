@@ -1,21 +1,29 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import NavTabs from "./pages/NavTabs";
-import SignUp from "./pages/SignUp";
-import Login from "./pages/Login";
-import Profile from "./pages/Profile";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Books from "./pages/Books";
 import Products from "./pages/Products";
-import Notes from "./pages/Notes";
-import { library } from "@fortawesome/fontawesome-svg-core";
-// eslint-disable-next-line
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { faSmileWink, faPlus, faComment } from "@fortawesome/free-solid-svg-icons";
+import Detail from "./pages/Detail";
+//import NoMatch from "./pages/NoMatch";
+import Nav from "./components/Nav";
+import "./App.css";
+//import axios from "axios";
+//import SignUp from "./pages/SignUp";
+import Profile from "./pages/Profile";
+import { faStar, faSmileWink, faPlus, faComment } from "@fortawesome/free-solid-svg-icons";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import Navigation from './components/Navigation';
+//import LandingPage from './components/Landing';
+import SignUpPage from './components/SignUp';
+import SignInPage from './components/SignIn';
+import PasswordForgetPage from './components/PasswordForget';
+import AccountPage from './components/Account';
+import AdminPage from './components/Admin';
+import * as ROUTES from './constants/routes';
+import { withAuthentication } from './components/Session';
 
 library.add(faSmileWink)
 library.add(faPlus)
 library.add(faComment)
-
 library.add(faStar)
 
 
@@ -23,16 +31,33 @@ function App() {
   return (
     <Router>
       <div>
-        <NavTabs />
-        <Route exact path="/" component={SignUp} />
-        <Route exact path="/Login" component={Login} />
-        <Route exact path="/Profile" component={Profile} />
-        <Route exact path="/Products" component={Products} />
-        <Route exact path="/Notes" component={Notes} />
+      <Navigation />
+          
+          <hr />
+    
+          <Route exact path={ROUTES.LANDING} component={Profile} />
+          <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
+          <Route path={ROUTES.SIGN_IN} component={SignInPage} />
+          <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
+          <Route path={ROUTES.ACCOUNT} component={AccountPage} />
+          <Route path={ROUTES.ADMIN} component={AdminPage} />
+          <Route
+            exact
+            path={ROUTES.PASSWORD_FORGET}
+            component={PasswordForgetPage}
+          />
+        <Nav />
+        <Switch>
+          <Route exact path="/notes" component={Books} />
+          <Route exact path="/books/:id" component={Detail} />
+          <Route exact path="/Profile" component={Profile} />
+          <Route exact path="/Products" component={Products} />
+          {/* <Route component={NoMatch} /> */}
+        </Switch>
       </div>
     </Router>
   );
 }
 
-export default App;
-
+export default withAuthentication(App);
+        
