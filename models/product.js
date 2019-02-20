@@ -1,35 +1,15 @@
-/*module.exports = (sequelize, DataTypes) => {
-    const Product = sequelize.define('Product', {
-  
-      product_name: {
-        type: DataTypes.TEXT,
-        required: true
-      },
-      product_brand: {
-        type: DataTypes.STRING,
-        required: true
-      },
-      product_price: {
-        type: DataTypes.DECIMAL,
-        required: true
-      },
-      product_shade: {
-        type: DataTypes.STRING,
-        required: false
-      },
-      product_type: {
-        type: DataTypes.STRING,
-        required: true,
-        defaultValue: false
-      }
-    });
-    Product.associate = function (models) {
-        Product.belongsTo(models.User, {
-          foreignKey: {
-            allowNull: true
-          }
-        });
-      };
-    console.log(Product);
-    return Product;
-  };*/
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const productSchema = new Schema({
+  product: { type: String, required: true },
+  product_brand: { type: String, required: true },
+  product_price: { type: Number, required: true },
+  product_shade: { type: String, required: true },
+  product_type: { type: String, required: true },
+  product_note: { type: String, required: true }
+});
+
+const Product = mongoose.model("Product", productSchema);
+
+module.exports = Product;

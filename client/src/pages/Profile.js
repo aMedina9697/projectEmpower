@@ -7,16 +7,6 @@ import lips from "../assets/lips.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Profile extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      user: {
-        name: 'Bruno Krebs',
-        picture: 'https://cdn.auth0.com/blog/profile-picture/bruno-krebs.png',
-      },
-    };
-  }
-
   render() {
     return (
             <div className= "mainBody">
@@ -38,21 +28,5 @@ class Profile extends Component {
     
   }
 }
-
-//this should show products for brows or whatever prodcut we have 
-// $(".browsPic-view").on("click", function (browsPic) {
-//   var id = $(this).data("id");
-
-//   // Send the GET request.
-//   $.ajax("/api/face/" + id, {
-//       type: "GET"
-//   }).then(
-//       function () {
-//           console.log("viewing", id);
-//           // Reload the page to get the updated list
-//           location.reload();
-//       }
-//   );
-// });
 
 export default Profile;

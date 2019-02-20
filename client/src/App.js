@@ -1,9 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Books from "./pages/Books";
 import Products from "./pages/Products";
 import Detail from "./pages/Detail";
-//import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import "./App.css";
 //import axios from "axios";
@@ -31,28 +29,27 @@ function App() {
   return (
     <Router>
       <div>
-      <Navigation />
-          
-          <hr />
-    
-          <Route exact path={ROUTES.LANDING} component={Profile} />
-          <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
-          <Route path={ROUTES.SIGN_IN} component={SignInPage} />
-          <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
-          <Route path={ROUTES.ACCOUNT} component={AccountPage} />
-          <Route path={ROUTES.ADMIN} component={AdminPage} />
-          <Route
-            exact
-            path={ROUTES.PASSWORD_FORGET}
-            component={PasswordForgetPage}
-          />
+        <Navigation />
+
+        <hr />
+
+        <Route exact path={ROUTES.LANDING} component={Profile} />
+        <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
+        <Route path={ROUTES.SIGN_IN} component={SignInPage} />
+        <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
+        <Route path={ROUTES.ACCOUNT} component={AccountPage} />
+        <Route path={ROUTES.ADMIN} component={AdminPage} />
+        <Route
+          exact
+          path={ROUTES.PASSWORD_FORGET}
+          component={PasswordForgetPage}
+        />
         <Nav />
         <Switch>
-          <Route exact path="/notes" component={Books} />
-          <Route exact path="/books/:id" component={Detail} />
-          <Route exact path="/Profile" component={Profile} />
-          <Route exact path="/Products" component={Products} />
-          {/* <Route component={NoMatch} /> */}
+          <Route exact path="/notes" component={Products} />
+          <Route exact path="/products/:id" component={Detail} />
+          <Route exact path="/profile" component={Profile} />
+          <Route exact path="/products" component={Products} />
         </Switch>
       </div>
     </Router>
@@ -60,4 +57,3 @@ function App() {
 }
 
 export default withAuthentication(App);
-        
