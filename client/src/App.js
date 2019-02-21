@@ -7,6 +7,7 @@ import "./App.css";
 //import axios from "axios";
 //import SignUp from "./pages/SignUp";
 import Profile from "./pages/Profile";
+import Notes from "./pages/Notes";
 import { faStar, faSmileWink, faPlus, faComment } from "@fortawesome/free-solid-svg-icons";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import Navigation from './components/Navigation';
@@ -46,7 +47,7 @@ function App() {
         />
         <Nav />
         <Switch>
-          <Route exact path="/notes" component={Products} />
+          <Route exact path="/notes" component={Notes} />
           <Route exact path="/products/:id" component={Detail} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/products" component={Products} />

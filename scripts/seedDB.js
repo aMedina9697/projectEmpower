@@ -5,7 +5,8 @@ const db = require("../models");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://project3:password1@ds237955.mlab.com:37955/heroku_gszd7s48"
+  "mongodb://localhost/products"
+  //"mongodb://project3:password1@ds237955.mlab.com:37955/heroku_gszd7s48"
 );
 
 const productSeed = [

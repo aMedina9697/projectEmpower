@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import DeleteBtn from "../components/DeleteBtn";
+//import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
+//import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
 class Products extends Component {
@@ -26,12 +26,7 @@ class Products extends Component {
   loadProducts = () => {
     API.getProducts()
       .then(res =>
-        this.setState({ products: res.data, product:"",
-        product_brand: "",
-        product_price: "",
-        product_shade: "",
-        product_type: "",
-        product_note: "" })
+        this.setState({products: res.data, product:"", product_brand: "", product_price: "", product_shade: "", product_type: "", product_note: "" })
       )
       .catch(err => console.log(err));
   };
@@ -69,7 +64,8 @@ class Products extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6">
+        <Col size="md-1"></Col>
+        <Col size="md-10">
             <Jumbotron>
               <h1>add your products, gorgeous:</h1>
             </Jumbotron>
@@ -78,39 +74,39 @@ class Products extends Component {
                 value={this.state.product}
                 onChange={this.handleInputChange}
                 name="product"
-                placeholder="product name (required)"
+                placeholder="product name"
               />
               <Input
-                defaultValue={this.state.product_brand}
+                value={this.state.product_brand}
                 onChange={this.handleInputChange}
-                name="brand"
-                placeholder="product brand (required)"
+                name="product_brand"
+                placeholder="product brand"
               />
               <Input
-                defaultValue={this.state.product_price}
+                value={this.state.product_price}
                 onChange={this.handleInputChange}
-                name="price (or estimate ;)"
-                placeholder="product brand (required)"
+                name="product_price"
+                placeholder="price (or estimate)"
               />
               <Input
-                defaultValue={this.state.product_shade}
+                value={this.state.product_shade}
                 onChange={this.handleInputChange}
-                name="shade"
+                name="product_shade"
                 placeholder="product shade"
                 
               />
               <Input
-                defaultValue={this.state.product_type}
+                value={this.state.product_type}
                 onChange={this.handleInputChange}
-                name="type"
+                name="product_type"
                 placeholder="product type"
                 />
 
               <TextArea
-                defaultValue={this.state.product_note}
+                value={this.state.product_note}
                 onChange={this.handleInputChange}
-                name="note"
-                placeholder="Thoughts?"
+                name="product_note"
+                placeholder="thoughts?"
               />
               <FormBtn
                 disabled={!(this.state.product && this.state.product_brand && this.state.product_price && this.state.product_shade && this.state.product_type && this.state.product_note)}
@@ -125,29 +121,7 @@ class Products extends Component {
                 <br/>
             </form>
           </Col>
-          <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1> love notes...</h1>
-            </Jumbotron>
-            {this.state.products.length ? (
-              <List>
-                {this.state.products.map(product => (
-                  <ListItem key={product._id}>
-                    <Link to={"/products/" + product._id}>
-                      <strong>
-                        {product.product} :
-                      
-                         {product.product_note}
-                      </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => this.deleteProduct(product._id)} />
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-              <h3> nothing saved yet ;) </h3>
-            )}
-          </Col>
+        <Col size="md-1"></Col>
         </Row>
       </Container>
     );
