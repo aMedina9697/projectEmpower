@@ -16,6 +16,7 @@ class Products extends Component {
   product_shade: "",
   product_type: "",
   product_note: ""
+
   };
 
   componentDidMount() {
@@ -80,33 +81,33 @@ class Products extends Component {
                 placeholder="product name (required)"
               />
               <Input
-                value={this.state.product_brand}
+                defaultValue={this.state.product_brand}
                 onChange={this.handleInputChange}
                 name="brand"
                 placeholder="product brand (required)"
               />
               <Input
-                value={this.state.product_price}
+                defaultValue={this.state.product_price}
                 onChange={this.handleInputChange}
                 name="price (or estimate ;)"
                 placeholder="product brand (required)"
               />
               <Input
-                value={this.state.product_shade}
+                defaultValue={this.state.product_shade}
                 onChange={this.handleInputChange}
                 name="shade"
                 placeholder="product shade"
                 
               />
               <Input
-                value={this.state.product_type}
+                defaultValue={this.state.product_type}
                 onChange={this.handleInputChange}
                 name="type"
                 placeholder="product type"
                 />
 
               <TextArea
-                value={this.state.product_note}
+                defaultValue={this.state.product_note}
                 onChange={this.handleInputChange}
                 name="note"
                 placeholder="Thoughts?"
