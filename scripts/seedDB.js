@@ -15,7 +15,7 @@ const productSeed = [
   product_brand: "Tarte",
   product_price: 12.99,
   product_shade: "t1",
-  product_type: "face",
+  product_type: "Skin",
   product_note: "good coverage"
   },
   {
@@ -23,7 +23,7 @@ const productSeed = [
   product_brand: "too Faced",
   product_price: 24.50,
   product_shade: "onyx",
-  product_type: "eye",
+  product_type: "Eyes",
   product_note: "clumpy, dries out too fast"
   },
   {
