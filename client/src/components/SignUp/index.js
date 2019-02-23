@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import "../SignIn/SignIn.css";
+
 import logo from "./logo.png";
+
+import { SignInLink } from '../SignIn';
+
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 
@@ -10,6 +14,7 @@ const SignUpPage = () => (
     <img src={logo} id ="logoPic" alt="logo"/>
     <h1 id="greeting2">get started, gorgeous</h1>
     <SignUpForm />
+    <SignInLink />
   </div>
 );
 
@@ -43,7 +48,7 @@ class SignUpFormBase extends Component {
           })
           .then(() => {
             this.setState({ ...INITIAL_STATE });
-            this.props.history.push(ROUTES.LANDING);
+            this.props.history.push(ROUTES.PROFILE);
           })
           .catch(error => {
             this.setState({ error });
@@ -59,6 +64,7 @@ class SignUpFormBase extends Component {
   onChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
+
 
   render() {
     const {
@@ -126,6 +132,8 @@ const SignUpLink = () => (
   <button class="signbutt" id="newbutt"><Link to={ROUTES.SIGN_UP}>sign up</Link></button>
   </div>
 );
+
 const SignUpForm = withRouter(withFirebase(SignUpFormBase));
+
 export default SignUpPage;
 export { SignUpForm, SignUpLink };
