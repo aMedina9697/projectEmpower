@@ -1,0 +1,10 @@
+button {
+    background: transparent;
+    outline: none;
+    border: none;
+}
+
+#logouticon {
+    height: 35px;
+    width: 35px;
+}
