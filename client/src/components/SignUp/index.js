@@ -127,9 +127,9 @@ class SignUpFormBase extends Component {
 
 const SignUpLink = () => (
  <div> <p id="newhere">
-    new here, gorgeous? 
+    new here, gorgeous? <button class="signbutt" id="newbutt"><Link to={ROUTES.SIGN_UP}>sign up.</Link></button>
   </p>
-  <button class="signbutt" id="newbutt"><Link to={ROUTES.SIGN_UP}>sign up</Link></button>
+  {/* <button class="signbutt" id="newbutt"><Link to={ROUTES.SIGN_UP}>sign up</Link></button> */}
   </div>
 );
 

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import "../styles/profile.css";
 import Modal from 'react-responsive-modal';
 import API from "../utils/API";
@@ -63,6 +63,7 @@ class Profile extends Component {
     return (
 
       <div className="mainBody">
+      <Navigation/>
         {console.log(this.state)}
         <div id="foreheadCircle"><FontAwesomeIcon icon="star" onClick={this.onOpenModal("Skin")} />
           {this.ourModal()}
@@ -93,6 +94,7 @@ class Profile extends Component {
 
         <br />
         <br />
+        <Nav/>
 
       </div>
 

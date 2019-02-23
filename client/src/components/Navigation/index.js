@@ -30,11 +30,7 @@ const NavigationAuth = () => (
 
 const NavigationNonAuth = () => (
   <ul class="topnav2">
-    <div class="navlink">
-      <Link to={ROUTES.LANDING}>Landing</Link>
-    </div>
-    <div class="navlink">
-      <Link to={ROUTES.SIGN_IN}>Sign In</Link>
+    <div class="">
     </div>
   </ul>
 );
