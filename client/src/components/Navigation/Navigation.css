@@ -1,0 +1,13 @@
+ .navlink {
+    display: block;
+    float: right;
+    overflow: auto;
+}
+
+#usericon {
+    height: 30px;
+    width: 35px;
+}
+
+    
+    

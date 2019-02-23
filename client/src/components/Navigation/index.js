@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import "./Navigation.css";
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
+import user from "./usercircle.png";
 
 import { AuthUserContext } from '../Session';
 
@@ -17,27 +18,24 @@ const Navigation = () => (
 );
 
 const NavigationAuth = () => (
-  <ul>
-    <li>
-      <Link to={ROUTES.ACCOUNT}>Account</Link>
-    </li>
-    <li>
-      <Link to={ROUTES.ADMIN}>Admin</Link>
-    </li>
-    <li>
+  <div class="topnav">
+    <div class="navlink">
+      <Link to={ROUTES.ACCOUNT}><img src={user} id ="usericon" alt="user"/></Link>
+    </div>
+    <div class="navlink">
       <SignOutButton />
-    </li>
-  </ul>
+    </div>
+  </div>
 );
 
 const NavigationNonAuth = () => (
-  <ul>
-    <li>
+  <ul class="topnav2">
+    <div class="navlink">
       <Link to={ROUTES.LANDING}>Landing</Link>
-    </li>
-    <li>
+    </div>
+    <div class="navlink">
       <Link to={ROUTES.SIGN_IN}>Sign In</Link>
-    </li>
+    </div>
   </ul>
 );
 
