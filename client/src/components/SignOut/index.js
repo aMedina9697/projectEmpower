@@ -5,7 +5,7 @@ import signout from "../Navigation/logout.png";
 
 const SignOutButton = ({ firebase }) => (
   <button type="button" onClick={firebase.doSignOut}>
-    <img src={signout} id ="logouticon" alt="signout"/>
+    <img src={signout} id="logouticon" alt="signout" />
   </button>
 );
 
