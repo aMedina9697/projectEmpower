@@ -64,17 +64,17 @@ class SignInFormBase extends Component {
           value={email}
           onChange={this.onChange}
           type="text"
-          placeholder="Email Address"
+          placeholder="email address"
         />
         <input
           name="password"
           value={password}
           onChange={this.onChange}
           type="password"
-          placeholder="Password"
+          placeholder="password"
         />
         <button disabled={isInvalid} type="submit" id="inClass">
-          Sign In
+          sign in
         </button>
 
         {error && <p>{error.message}</p>}
@@ -84,7 +84,7 @@ class SignInFormBase extends Component {
 }
 const SignInLink = () => (
   <div> <p id="backToProf">
-     Back to sign in
+     back to sign in
    </p>
    <button class="inClass" id="signId"><Link to={ROUTES.SIGN_IN}>sign in</Link></button>
    </div>
