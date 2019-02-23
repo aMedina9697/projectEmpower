@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import "../SignIn/SignIn.css";
+import { SignInLink } from '../SignIn';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 
 const SignUpPage = () => (
   <div>
     <SignUpForm />
+    <SignInLink />
   </div>
 );
 
@@ -123,6 +125,8 @@ const SignUpLink = () => (
   <button class="signbutt" id="newbutt"><Link to={ROUTES.SIGN_UP}>sign up</Link></button>
   </div>
 );
+
 const SignUpForm = withRouter(withFirebase(SignUpFormBase));
+
 export default SignUpPage;
 export { SignUpForm, SignUpLink };
