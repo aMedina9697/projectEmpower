@@ -42,7 +42,7 @@ class SignUpFormBase extends Component {
           })
           .then(() => {
             this.setState({ ...INITIAL_STATE });
-            this.props.history.push(ROUTES.LANDING);
+            this.props.history.push(ROUTES.PROFILE);
           })
           .catch(error => {
             this.setState({ error });
@@ -58,6 +58,7 @@ class SignUpFormBase extends Component {
   onChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
+
 
   render() {
     const {
