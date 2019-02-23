@@ -1,12 +1,13 @@
 .nav.nav-tabs{
     width: 100%;
+    background-color: #5d576b;
 }
 
 
 
 #smile-wink {
     /* text-align: center; */
-    color: #5d576b;
+    color: #edaea6;
     /* opacity: 60%; */
     /* margin-left: auto;
     margin-right: auto;
@@ -15,7 +16,7 @@
 
 #comment {
     /* text-align: center; */
-    color: #5d576b;
+    color: #edaea6;
     /* opacity: 60%; */
     /* margin-left: auto;
     margin-right: auto;
@@ -24,7 +25,7 @@
 
 #plus {
     /* text-align: center; */
-    color: #5d576b;
+    color: #edaea6;
     /* opacity: 60%; */
     /* margin-left: auto;
     margin-right: auto;
