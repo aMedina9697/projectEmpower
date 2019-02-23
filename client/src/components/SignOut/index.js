@@ -1,5 +1,5 @@
 import React from 'react';
-import "./SignOut.css";
+import "./signout.css";
 import { withFirebase } from '../Firebase';
 import signout from "../Navigation/logout.png";
 
