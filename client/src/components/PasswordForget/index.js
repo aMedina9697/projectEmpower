@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import '../SignIn/SignIn.css';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 
@@ -57,7 +57,7 @@ class PasswordForgetFormBase extends Component {
           placeholder="Email Address"
         />
         <button disabled={isInvalid} type="submit">
-          Reset My Password
+          reset my password
         </button>
 
         {error && <p>{error.message}</p>}
@@ -67,8 +67,8 @@ class PasswordForgetFormBase extends Component {
 }
 
 const PasswordForgetLink = () => (
-  <p>
-    <Link to={ROUTES.PASSWORD_FORGET}>Forgot Password?</Link>
+  <p id="forgotpass">
+    <Link to={ROUTES.PASSWORD_FORGET}>forgot password?</Link>
   </p>
 );
 

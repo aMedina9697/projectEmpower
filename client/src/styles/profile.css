@@ -1,5 +1,12 @@
 body {
     background-color: #9bc0c1;
+    font-family:  'Dosis', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: #e6ebe0;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
 }
 
 .mainBody {

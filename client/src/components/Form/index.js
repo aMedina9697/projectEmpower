@@ -1,4 +1,5 @@
 import React from "react";
+import "../SignIn/SignIn.css";
 
 // This file exports the Input, TextArea, and FormBtn components
 

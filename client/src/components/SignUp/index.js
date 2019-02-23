@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-
+import "../SignIn/SignIn.css";
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 
 const SignUpPage = () => (
   <div>
-    <h1>SignUp</h1>
     <SignUpForm />
   </div>
 );
@@ -74,37 +73,41 @@ class SignUpFormBase extends Component {
       username === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={this.onSubmit} id="signupform">
         <input
           name="username"
           value={username}
           onChange={this.onChange}
           type="text"
-          placeholder="Full Name"
+          placeholder="full name"
         />
         <input
           name="email"
           value={email}
           onChange={this.onChange}
           type="text"
-          placeholder="Email Address"
+          placeholder="email address"
         />
         <input
           name="passwordOne"
           value={passwordOne}
           onChange={this.onChange}
           type="password"
-          placeholder="Password"
+          placeholder="password"
         />
         <input
           name="passwordTwo"
           value={passwordTwo}
           onChange={this.onChange}
           type="password"
-          placeholder="Confirm Password"
+          placeholder="confirm password"
         />
-        <button disabled={isInvalid} type="submit">
-          Sign Up
+        <br/>
+        <br/>
+        <br/>
+
+        <button disabled={isInvalid} type="submit" class="signbutt">
+          sign up
         </button>
 
         {error && <p>{error.message}</p>}
@@ -114,9 +117,11 @@ class SignUpFormBase extends Component {
 }
 
 const SignUpLink = () => (
-  <p>
-    Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
+ <div> <p id="newhere">
+    new here, gorgeous? 
   </p>
+  <button class="signbutt" id="newbutt"><Link to={ROUTES.SIGN_UP}>sign up</Link></button>
+  </div>
 );
 const SignUpForm = withRouter(withFirebase(SignUpFormBase));
 export default SignUpPage;

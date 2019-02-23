@@ -2,6 +2,8 @@ import React, { Component } from "react";
 //import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
+import Nav from "../components/Nav";
+import Navigation from "../components/Navigation";
 //import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 //import { List, ListItem } from "../components/List";
@@ -63,6 +65,7 @@ class Products extends Component {
   render() {
     return (
       <Container fluid>
+      <Navigation/>
         <Row>
         <Col size="md-1"></Col>
         <Col size="md-10">
@@ -123,6 +126,7 @@ class Products extends Component {
           </Col>
         <Col size="md-1"></Col>
         </Row>
+        <Nav/>
       </Container>
     );
   }

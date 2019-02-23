@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
-
+//import logo from ".../assets/logo.png";
 import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
+import "../SignIn/SignIn.css";
 
 const SignInPage = () => (
   <div>
-    <h1>SignIn</h1>
+    {/* <img src={logo} id ="logoPic" alt="logo"/> */}
+    <h1 id="greeting">hello, gorgeous</h1>
     <SignInForm />
     <PasswordForgetLink />
     <SignUpLink />
@@ -55,23 +57,26 @@ class SignInFormBase extends Component {
     const isInvalid = password === '' || email === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
+      
+      <form onSubmit={this.onSubmit} id="loginform">
         <input
           name="email"
           value={email}
           onChange={this.onChange}
           type="text"
-          placeholder="Email Address"
+          placeholder="email address"
         />
         <input
           name="password"
           value={password}
           onChange={this.onChange}
           type="password"
-          placeholder="Password"
+          placeholder="password"
         />
-        <button disabled={isInvalid} type="submit">
-          Sign In
+        <br/>
+        <br/>
+        <button disabled={isInvalid} type="submit" id ="inbutt" class="signbutt">
+          sign in
         </button>
 
         {error && <p>{error.message}</p>}

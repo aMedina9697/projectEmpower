@@ -5,7 +5,10 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
+import Nav from "../components/Nav";
+import Navigation from "../components/Navigation";
 //import { Input, TextArea, FormBtn } from "../components/Form";
+
 
 class Notes extends Component {
   state = {
@@ -61,7 +64,9 @@ class Notes extends Component {
 
   render() {
     return (
+      
       <Container fluid>
+      <Navigation/>
         <Row>
         <Col size="md-1"></Col>
           <Col size="md-10">
@@ -89,7 +94,7 @@ class Notes extends Component {
           </Col>
           <Col size="md-1"></Col>
         </Row>
-        
+        <Nav/>
       </Container>
     );
   }
