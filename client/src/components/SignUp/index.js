@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import "../SignIn/SignIn.css";
+import logo from "./logo.png";
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 
 const SignUpPage = () => (
   <div>
+    <img src={logo} id ="logoPic" alt="logo"/>
+    <h1 id="greeting2">get started, gorgeous</h1>
     <SignUpForm />
   </div>
 );

@@ -14,6 +14,9 @@ class Profile extends Component {
       
             <div className= "mainBody">
             <Navigation/>
+            <br/>
+            <br/>
+            <br/>
       <div id="foreheadCircle"><FontAwesomeIcon icon="star" /></div>
       <br/>
       <br/>

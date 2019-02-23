@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
-//import logo from ".../assets/logo.png";
+import logo from "./logo.png";
 import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
 import { withFirebase } from '../Firebase';
@@ -10,7 +10,7 @@ import "../SignIn/SignIn.css";
 
 const SignInPage = () => (
   <div>
-    {/* <img src={logo} id ="logoPic" alt="logo"/> */}
+    <img src={logo} id ="logoPic" alt="logo"/>
     <h1 id="greeting">hello, gorgeous</h1>
     <SignInForm />
     <PasswordForgetLink />
@@ -73,7 +73,6 @@ class SignInFormBase extends Component {
           type="password"
           placeholder="password"
         />
-        <br/>
         <br/>
         <button disabled={isInvalid} type="submit" id ="inbutt" class="signbutt">
           sign in
