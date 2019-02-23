@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
-
+import { Link } from 'react-router-dom';
+//import logo from ".../assets/logo.png";
 import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
+import "../SignIn/SignIn.css";
 
 const SignInPage = () => (
   <div>
-    <h1>SignIn</h1>
+    {/* <img src={logo} id ="logoPic" alt="logo"/> */}
+    <h1 id="greeting">hello, gorgeous</h1>
     <SignInForm />
     <PasswordForgetLink />
     <SignUpLink />
@@ -36,7 +39,7 @@ class SignInFormBase extends Component {
       .doSignInWithEmailAndPassword(email, password)
       .then(() => {
         this.setState({ ...INITIAL_STATE });
-        this.props.history.push(ROUTES.LANDING);
+        this.props.history.push(ROUTES.PROFILE);
       })
       .catch(error => {
         this.setState({ error });
@@ -61,17 +64,17 @@ class SignInFormBase extends Component {
           value={email}
           onChange={this.onChange}
           type="text"
-          placeholder="Email Address"
+          placeholder="email address"
         />
         <input
           name="password"
           value={password}
           onChange={this.onChange}
           type="password"
-          placeholder="Password"
+          placeholder="password"
         />
-        <button disabled={isInvalid} type="submit">
-          Sign In
+        <button disabled={isInvalid} type="submit" id="inClass">
+          sign in
         </button>
 
         {error && <p>{error.message}</p>}
@@ -79,6 +82,13 @@ class SignInFormBase extends Component {
     );
   }
 }
+const SignInLink = () => (
+  <div> <p id="backToProf">
+     back to sign in
+   </p>
+   <button class="inClass" id="signId"><Link to={ROUTES.SIGN_IN}>sign in</Link></button>
+   </div>
+ );
 
 const SignInForm = compose(
   withRouter,
@@ -87,4 +97,4 @@ const SignInForm = compose(
 
 export default SignInPage;
 
-export { SignInForm };
+export { SignInForm, SignInLink };

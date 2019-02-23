@@ -7,6 +7,8 @@ import brows from "../assets/brows.png";
 import eyes from "../assets/eyes.png";
 import nose from "../assets/nose.png";
 import lips from "../assets/lips.png";
+import Nav from "../components/Nav";
+import Navigation from "../components/Navigation";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
@@ -26,6 +28,7 @@ class Profile extends Component {
   render() {
     const { open } = this.state;
     return (
+
       <div className="mainBody">
 
         <div id="foreheadCircle"><FontAwesomeIcon icon="star" onClick={this.onOpenModal} />
@@ -73,6 +76,7 @@ class Profile extends Component {
         <br />
 
       </div>
+
     )
 
   }
