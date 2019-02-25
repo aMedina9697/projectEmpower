@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// eslint-disable-next-line
 import ReactDOM from 'react-dom';
 import "../styles/profile.css";
 import Modal from 'react-responsive-modal';
@@ -7,7 +8,9 @@ import brows from "../assets/brows.png";
 import eyes from "../assets/eyes.png";
 import nose from "../assets/nose.png";
 import lips from "../assets/lips.png";
+// eslint-disable-next-line
 import Nav from "../components/Nav";
+// eslint-disable-next-line
 import Navigation from "../components/Navigation";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
