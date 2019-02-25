@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 // eslint-disable-next-line
 import ReactDOM from 'react-dom';
 import "../styles/profile.css";
@@ -66,6 +67,7 @@ class Profile extends Component {
     return (
 
       <div className="mainBody">
+      <Navigation/>
         {console.log(this.state)}
         <div id="foreheadCircle"><FontAwesomeIcon icon="star" onClick={this.onOpenModal("Skin")} />
           {this.ourModal()}
@@ -96,6 +98,7 @@ class Profile extends Component {
 
         <br />
         <br />
+        <Nav/>
 
       </div>
 

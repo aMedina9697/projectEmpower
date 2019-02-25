@@ -13,7 +13,7 @@ import "../SignIn/SignIn.css";
 
 const SignInPage = () => (
   <div>
-    <img src={logo} id ="logoPic" alt="logo"/>
+    <img src={logo} id="logoPic" alt="logo" />
     <h1 id="greeting">hello, gorgeous</h1>
     <SignInForm />
     <PasswordForgetLink />
@@ -76,9 +76,9 @@ class SignInFormBase extends Component {
           placeholder="password"
         />
 
+
         <br/>
         <button disabled={isInvalid} type="submit" id ="inbutt" class="signbutt">
-
           sign in
         </button>
 
@@ -88,12 +88,12 @@ class SignInFormBase extends Component {
   }
 }
 const SignInLink = () => (
-  <div> <p id="backToProf">
-     back to sign in
-   </p>
-   <button class="inClass" id="signId"><Link to={ROUTES.SIGN_IN}>sign in</Link></button>
+
+  <div id="backToProf">
+   <button class="inClass" id="signId"><Link to={ROUTES.SIGN_IN}>back to sign in.</Link></button>
    </div>
  );
+
 
 const SignInForm = compose(
   withRouter,
