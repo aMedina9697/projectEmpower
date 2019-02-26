@@ -1,0 +1,48 @@
+.label {
+    font-family: 'Dancing Script', cursive;
+    color: #e6ebe0;
+    font-size: 60px;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-shadow:
+    0px 4px 3px #5d576b,
+    0px 8px 13px #5d576b,
+    0px 18px 23px #5d576b;
+    
+}
+#note {
+    text-align: left;
+}
+
+#renderedname {
+    border-bottom-color: #5d576b;
+    padding-bottom: 5px;
+    color: #e6ebe0;
+    text-shadow:
+    2px 2px 2px #5d576b;
+    font-size: 25px;
+}
+
+#renderednote {
+    font-size: 18px;
+    color: #5d576b;
+    text-shadow:
+    1px 1px 1px #edaea6;
+}
+
+.list-group-item {
+    background-color: #9bc0c1;
+    color: #e6ebe0;
+    
+}
+.list-overflow-container {
+    background-color: #9bc0c1;
+    border-left: 45px solid #5d576b;
+    border-right: 2px solid #5d576b;
+    border-top: 2px solid #5d576b;
+    border-bottom: 2px solid #5d576b;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px #e3f4bc;
+}

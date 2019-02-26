@@ -1,33 +1,25 @@
 .nav.nav-tabs{
     width: 100%;
+    border: 3px solid #5d576b;
     background-color: #5d576b;
+    box-shadow: 1px 1px #e3f4bc;
+    opacity: 70%;
+   
+}
+.nav-item.active {
+    background-color: #e3f4bc;
 }
 
-
-
 #smile-wink {
-    /* text-align: center; */
-    color: #edaea6;
-    /* opacity: 60%; */
-    /* margin-left: auto;
-    margin-right: auto;
-    font-size: 20px; */
+    color: #e6ebe0;
+    width: 120%;
 }
 
 #comment {
-    /* text-align: center; */
-    color: #edaea6;
-    /* opacity: 60%; */
-    /* margin-left: auto;
-    margin-right: auto;
-    font-size: 20px; */
+    color: #e6ebe0;  
+    width: 115%;
 }
 
 #plus {
-    /* text-align: center; */
-    color: #edaea6;
-    /* opacity: 60%; */
-    /* margin-left: auto;
-    margin-right: auto;
-    font-size: 20px; */
+    color: #e6ebe0;
 }

@@ -7,7 +7,7 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import Nav from "../components/Nav";
 import Navigation from "../components/Navigation";
-//import { Input, TextArea, FormBtn } from "../components/Form";
+import "../styles/notes.css";
 
 
 class Notes extends Component {
@@ -39,29 +39,6 @@ class Notes extends Component {
       .catch(err => console.log(err));
   };
 
-  // handleInputChange = event => {
-  //   const { name, value } = event.target;
-  //   this.setState({
-  //     [name]: value
-  //   });
-  // };
-
-  // handleFormSubmit = event => {
-  //   event.preventDefault();
-  //   if (this.state.product && this.state.product_brand && this.state.product_price && this.state.product_shade && this.state.product_type && this.state.product_note) {
-  //     API.saveProduct({
-  //       product: this.state.product,
-  //       product_brand: this.state.product_brand,
-  //       product_price: this.state.product_price,
-  //       product_shade: this.state.product_shade,
-  //       product_type: this.state.product_type,
-  //       product_note: this.state.product_note
-  //     })
-  //       .then(res => this.loadProducts())
-  //       .catch(err => console.log(err));
-  //   }
-  // };
-
   render() {
     return (
       
@@ -71,20 +48,23 @@ class Notes extends Component {
         <Col size="md-1"></Col>
           <Col size="md-10">
             <Jumbotron>
-              <h1> love notes...</h1>
+              <h1 class="label"> love notes...</h1>
             </Jumbotron>
             {this.state.products.length ? (
               <List>
                 {this.state.products.map(product => (
-                  <ListItem key={product._id}>
+                  <ListItem key={product._id} >
+                  <div id="note">
                     <Link to={"/products/" + product._id}>
-                      <strong>
-                        {product.product} :
-                      
-                         {product.product_note}
-                      </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => this.deleteProduct(product._id)} />
+                      <strong id="renderedname">
+                        {product.product} : 
+                        </strong><DeleteBtn onClick={() => this.deleteProduct(product._id)} />
+                        <br/>
+                        <span id="renderednote">
+                         {product.product_note}</span>
+                    </Link> 
+                  </div>
+                    
                   </ListItem>
                 ))}
               </List>

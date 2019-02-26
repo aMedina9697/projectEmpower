@@ -29,8 +29,8 @@ const NavigationAuth = () => (
 );
 
 const NavigationNonAuth = () => (
-  <ul class="topnav2">
-    <div class="">
+  <ul className="topnav2">
+    <div className="">
     </div>
   </ul>
 );
