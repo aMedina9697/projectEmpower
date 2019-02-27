@@ -12,12 +12,12 @@ import { Input, TextArea, FormBtn } from "../components/Form";
 class Products extends Component {
   state = {
     products: [],
-    product:"",
-  product_brand: "",
-  product_price: "",
-  product_shade: "",
-  product_type: "",
-  product_note: ""
+    product: "",
+    product_brand: "",
+    product_price: "",
+    product_shade: "",
+    product_type: "Skin",
+    product_note: ""
 
   };
 
@@ -28,7 +28,7 @@ class Products extends Component {
   loadProducts = () => {
     API.getProducts()
       .then(res =>
-        this.setState({products: res.data, product:"", product_brand: "", product_price: "", product_shade: "", product_type: "", product_note: "" })
+        this.setState({ products: res.data, product: "", product_brand: "", product_price: "", product_shade: "", product_type: "Skin", product_note: "" })
       )
       .catch(err => console.log(err));
   };
@@ -48,7 +48,9 @@ class Products extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
+    console.log('we got clicked!!')
     if (this.state.product && this.state.product_brand && this.state.product_price && this.state.product_shade && this.state.product_type && this.state.product_note) {
+      console.log('about to do API call inside if!!!!')
       API.saveProduct({
         product: this.state.product,
         product_brand: this.state.product_brand,
@@ -63,12 +65,15 @@ class Products extends Component {
   };
 
   render() {
+    console.log('this is our state', this.state)
+    let buttonConditional = !(this.state.product.length > 0 && this.state.product_brand.length > 0 && this.state.product_price.length > 0 && this.state.product_shade.length > 0  && this.state.product_note.length > 0)
+    console.log('test codition!!!!', buttonConditional);
     return (
       <Container fluid>
-      <Navigation/>
+        <Navigation />
         <Row>
-        <Col size="md-1"></Col>
-        <Col size="md-10">
+          <Col size="md-1"></Col>
+          <Col size="md-10">
             <Jumbotron>
               <h1>add your products, gorgeous:</h1>
             </Jumbotron>
@@ -96,14 +101,20 @@ class Products extends Component {
                 onChange={this.handleInputChange}
                 name="product_shade"
                 placeholder="product shade"
-                
+
               />
-              <Input
-                value={this.state.product_type}
-                onChange={this.handleInputChange}
-                name="product_type"
-                placeholder="product type"
-                />
+              <select onChange={this.handleInputChange} name="product_type">
+                <option
+                  value="Skin">Skin</option>
+                <option
+                  value="Eyes">Eyes</option>
+                <option
+                  value="Cheek">Cheek</option>
+                <option
+                  value="Eyebrows">Eyebrows</option>
+                <option
+                  value="Lips">Lips</option>
+              </select>
 
               <TextArea
                 value={this.state.product_note}
@@ -112,21 +123,24 @@ class Products extends Component {
                 placeholder="thoughts?"
               />
               <FormBtn
-                disabled={!(this.state.product && this.state.product_brand && this.state.product_price && this.state.product_shade && this.state.product_type && this.state.product_note)}
+                // disabled={!(this.state.product && this.state.product_brand && this.state.product_price && this.state.product_shade && this.state.product_type && this.state.product_note)}
+                disabled={buttonConditional}
                 onClick={this.handleFormSubmit}
               >
+
                 submit product!
               </FormBtn>
-              <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+              {/* <button onClick={this.handleFormSubmit}> SUBMITTTTTTTTTTTTTTTT</button> */}
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
             </form>
           </Col>
-        <Col size="md-1"></Col>
+          <Col size="md-1"></Col>
         </Row>
-        <Nav/>
+        <Nav />
       </Container>
     );
   }
