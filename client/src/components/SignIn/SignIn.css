@@ -34,7 +34,7 @@ input {
     border-top: none;
     border-right: none;
     border-left: none;
-    border-bottom-color: #5d576b,
+    border-bottom: 2px solid #e6ebe0;
 }
 
 button {
