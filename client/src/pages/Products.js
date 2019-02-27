@@ -86,6 +86,8 @@ class Products extends Component {
     return (
       <Container fluid>
         <Navigation />
+        <br/>
+      <br/>
         <Row>
           <Col size="md-1"></Col>
           <Col size="md-10">
@@ -118,17 +120,17 @@ class Products extends Component {
                 placeholder="product shade"
 
               />
-              <select onChange={this.handleInputChange} name="product_type">
+              <select onChange={this.handleInputChange} name="product_type" id="dropdown">
                 <option
-                  value="Skin">Skin</option>
+                  value="Skin">skin</option>
                 <option
-                  value="Eyes">Eyes</option>
+                  value="Eyes">eyes</option>
                 <option
-                  value="Cheek">Cheek</option>
+                  value="Cheek">cheeks</option>
                 <option
-                  value="Eyebrows">Eyebrows</option>
+                  value="Eyebrows">eyebrows</option>
                 <option
-                  value="Lips">Lips</option>
+                  value="Lips">lips</option>
               </select>
 
               <TextArea
@@ -141,11 +143,12 @@ class Products extends Component {
               <div>Your product has been added!</div></Popup>
               <FormBtn
                 disabled={buttonConditional}
-                onClick={(e) => { this.handleFormSubmit(e) }}
-              >
-                submit product!
-              </FormBtn >
 
+                onClick={this.handleFormSubmit}
+              > 
+                add
+
+              </FormBtn >
 
               <br />
               <br />

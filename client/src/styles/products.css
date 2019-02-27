@@ -23,6 +23,9 @@
     height: 45px;
     text-shadow:
     1px 1px 1px #edaea6;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
 }
 .btn-success {
     font-size: 18px;
@@ -35,4 +38,23 @@
     2px 2px 2px #edaea6;
     background-color: #e6ebe0!important;
     color: #5d576b !important;
+}
+#dropdown{
+    background-color: #9bc0c1;
+    margin-bottom: 5%;
+    padding-left: 15px;
+    border-left: 15px solid #5d576b;
+    border-right: 2px solid #5d576b;
+    border-top: 2px solid #5d576b;
+    border-bottom: 2px solid #5d576b;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #e3f4bc;
+    font-size: 18px;
+    color: #5d576b;
+    height: 45px;
+    text-shadow:
+    1px 1px 1px #edaea6;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    width: 95%;
 }
