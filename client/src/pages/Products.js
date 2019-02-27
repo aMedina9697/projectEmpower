@@ -143,8 +143,7 @@ class Products extends Component {
               <div>Your product has been added!</div></Popup>
               <FormBtn
                 disabled={buttonConditional}
-
-                onClick={this.handleFormSubmit}
+               onClick={(e) => { this.handleFormSubmit(e) }}
               > 
                 add
 
