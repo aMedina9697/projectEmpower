@@ -40,7 +40,7 @@ const productSeed = [
   product_price: 24.00,
   product_shade: "Regular",
   product_type: "Skin",
-  product_note: ""
+  product_note: "LOVE THIS! a little expensive but worth it"
   },
   {
     product: "Aquamarina Face Wash",
@@ -48,7 +48,7 @@ const productSeed = [
   product_price: 12.95,
   product_shade: "14oz",
   product_type: "Skin",
-  product_note: ""
+  product_note: "smells weird but works weel"
   },
   {
     product: "All Nighter Setting Spray",
@@ -56,7 +56,7 @@ const productSeed = [
   product_price:32.00,
   product_shade: "16oz",
   product_type: "Skin",
-  product_note: ""
+  product_note: "expensive but holds so well"
   },
   {
     product: "Naked Pallette",
@@ -64,7 +64,7 @@ const productSeed = [
   product_price: 54.00,
   product_shade: "Naked 3",
   product_type: "Eyes",
-  product_note: ""
+  product_note: "i like naked 2 better"
   },
   {
     product: "Stay All Day",
@@ -72,7 +72,7 @@ const productSeed = [
   product_price: 22.00,
   product_shade: "True Black",
   product_type: "Eyes",
-  product_note: ""
+  product_note: "stays really well but really crisp"
   },
   {
     product: "Shadow Insurance",
@@ -88,7 +88,7 @@ const productSeed = [
   product_price: 14.95,
   product_shade: "Demi",
   product_type: "Eyes",
-  product_note: ""
+  product_note: "double up for extra volume"
   },
   {
     product: "Powder Blush",
@@ -104,7 +104,7 @@ const productSeed = [
   product_price:14.99,
   product_shade: "Sunkissed",
   product_type: "Cheek",
-  product_note: ""
+  product_note: "summer shade"
   },
   {
     product: "The Cali Kit",
@@ -120,7 +120,7 @@ const productSeed = [
   product_price:38.00,
   product_shade: "Champagne Pop",
   product_type: "Cheek",
-  product_note: ""
+  product_note: "gorgeous shade"
   },
   {
     product: "Mineral Veil Finishing Powder",
@@ -136,7 +136,7 @@ const productSeed = [
   product_price:21.00,
   product_shade: "Chocolate",
   product_type: "Eyebrows",
-  product_note: ""
+  product_note: "really nice kit, maybe go a shade darker"
   },
   {
     product: "Brow Zings!",
@@ -152,7 +152,7 @@ const productSeed = [
   product_price: 6.00,
   product_shade: "Clear",
   product_type: "Eyebrows",
-  product_note: ""
+  product_note: "good for a natural look"
   },
   {
     product: "Stencils",
@@ -160,7 +160,7 @@ const productSeed = [
   product_price:20.00,
   product_shade: "Sharp",
   product_type: "Eyebrows",
-  product_note: ""
+  product_note: "good for a night out and intense brows"
   },
   {
     product: "Lipstick Matte",
@@ -168,7 +168,7 @@ const productSeed = [
   product_price: 16.00,
   product_shade: "Ruby Woo",
   product_type: "Lips",
-  product_note: ""
+  product_note: "very Taylor Swift-esque shade"
   },
   {
     product: "Lip Kit",
@@ -176,7 +176,7 @@ const productSeed = [
   product_price: 14.99,
   product_shade: "Jordy",
   product_type: "Lips",
-  product_note: ""
+  product_note: "RIP Jordyn"
   },
   {
     product: "Shiny Sheer Lip Gloss",
@@ -192,7 +192,7 @@ const productSeed = [
   product_price:14.00,
   product_shade: "Blue",
   product_type: "Lips",
-  product_note: ""
+  product_note: "really moisturizing"
   },
   {
     product: "24/7 Glide On Lip Pencil",
