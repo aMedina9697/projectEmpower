@@ -8,7 +8,10 @@ import Navigation from "../components/Navigation";
 import { Col, Row, Container } from "../components/Grid";
 //import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+
+import Popup from "reactjs-popup";
 import "../styles/products.css";
+
 
 class Products extends Component {
   state = {
@@ -18,10 +21,11 @@ class Products extends Component {
     product_price: "",
     product_shade: "",
     product_type: "Skin",
-    product_note: ""
-
+    product_note: "",
+    open: false
   };
 
+ 
   componentDidMount() {
     this.loadProducts();
   }
@@ -49,6 +53,7 @@ class Products extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
+    this.setState({open: true})
     console.log('we got clicked!!')
     if (this.state.product && this.state.product_brand && this.state.product_price && this.state.product_shade && this.state.product_type && this.state.product_note) {
       console.log('about to do API call inside if!!!!')
@@ -60,15 +65,24 @@ class Products extends Component {
         product_type: this.state.product_type,
         product_note: this.state.product_note
       })
-        .then(res => this.loadProducts())
+
+        .then(res => console.log(res))
+        //this.loadProducts())
+
         .catch(err => console.log(err));
+
     }
   };
 
+  popUpClosed = () => {
+    this.setState({open: false})
+  }
+  popUpOpen = () => {
+    this.setState({open: true})
+  }
+
   render() {
-    console.log('this is our state', this.state)
-    let buttonConditional = !(this.state.product.length > 0 && this.state.product_brand.length > 0 && this.state.product_price.length > 0 && this.state.product_shade.length > 0  && this.state.product_note.length > 0)
-    console.log('test codition!!!!', buttonConditional);
+    let buttonConditional = !(this.state.product.length > 0 && this.state.product_brand.length > 0 && this.state.product_price.length > 0 && this.state.product_shade.length > 0 && this.state.product_note.length > 0)
     return (
       <Container fluid>
         <Navigation />
@@ -80,7 +94,7 @@ class Products extends Component {
             <Jumbotron>
               <h1 class="formintro">add your <br/> products, gorgeous:</h1>
             </Jumbotron>
-            <form>
+            <div>
               <Input
                 value={this.state.product}
                 onChange={this.handleInputChange}
@@ -125,21 +139,23 @@ class Products extends Component {
                 name="product_note"
                 placeholder="thoughts?"
               />
+              <Popup open={this.state.open} position="right center">
+              <div>Your product has been added!</div></Popup>
               <FormBtn
-                // disabled={!(this.state.product && this.state.product_brand && this.state.product_price && this.state.product_shade && this.state.product_type && this.state.product_note)}
                 disabled={buttonConditional}
+
                 onClick={this.handleFormSubmit}
               > 
                 add
 
-              </FormBtn>
-              {/* <button onClick={this.handleFormSubmit}> SUBMITTTTTTTTTTTTTTTT</button> */}
+              </FormBtn >
+
               <br />
               <br />
               <br />
               <br />
               <br />
-            </form>
+            </div>
           </Col>
           <Col size="md-1"></Col>
         </Row>
