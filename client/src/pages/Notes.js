@@ -44,6 +44,9 @@ class Notes extends Component {
       
       <Container fluid>
       <Navigation/>
+      
+      <br/>
+      <br/>
         <Row>
         <Col size="md-1"></Col>
           <Col size="md-10">

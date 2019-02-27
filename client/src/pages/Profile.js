@@ -68,6 +68,8 @@ class Profile extends Component {
 
       <div className="mainBody">
       <Navigation/>
+      <br/>
+      <br/>
         {console.log(this.state)}
         <div id="foreheadCircle"><FontAwesomeIcon icon="star" onClick={this.onOpenModal("Skin")} />
 
