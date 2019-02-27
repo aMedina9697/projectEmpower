@@ -15,8 +15,6 @@ import Nav from "../components/Nav";
 import Navigation from "../components/Navigation";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-
-
 class Profile extends Component {
   state = {
     open: false,
@@ -49,19 +47,21 @@ class Profile extends Component {
     let selectedProducts = this.state.products.filter(p => p.product_type === type)
     this.setState({ selectedProducts: selectedProducts })
   }
-
   ourModal = () => {
     return (
       <Modal open={this.state.open} onClose={this.onCloseModal} center>
+        <h3>{this.product_type}</h3>
         {this.state.selectedProducts.map(product => (
           <div key={product._id}>
             <p> {product.product_brand} | {product.product} | {product.product_shade} </p>
           </div>
         )
         )}
+
       </Modal>
     )
   }
+
   render() {
     // const { open } = this.state;
     return (
@@ -70,6 +70,7 @@ class Profile extends Component {
       <Navigation/>
         {console.log(this.state)}
         <div id="foreheadCircle"><FontAwesomeIcon icon="star" onClick={this.onOpenModal("Skin")} />
+
           {this.ourModal()}
         </div>
         <br />
