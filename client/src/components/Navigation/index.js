@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import "./Navigation.css";
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
@@ -23,16 +23,13 @@ const NavigationAuth = () => (
       <Link to={ROUTES.ACCOUNT}><img src={user} id ="usericon" alt="user"/></Link>
     </div>
     <div class="navlink">
-      <SignOutButton />
+      <SignOutButton />    
     </div>
   </div>
 );
 
-const NavigationNonAuth = () => (
-  <ul className="topnav2">
-    <div className="">
-    </div>
-  </ul>
-);
+ const NavigationNonAuth = () => ( 
+   <Redirect to="/signin" />
+ )
 
 export default Navigation;
