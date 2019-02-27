@@ -8,7 +8,9 @@ import Navigation from "../components/Navigation";
 import { Col, Row, Container } from "../components/Grid";
 //import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+
 import Popup from "reactjs-popup";
+import "../styles/products.css";
 
 
 class Products extends Component {
@@ -88,7 +90,7 @@ class Products extends Component {
           <Col size="md-1"></Col>
           <Col size="md-10">
             <Jumbotron>
-              <h1>add your products, gorgeous:</h1>
+              <h1 class="formintro">add your <br/> products, gorgeous:</h1>
             </Jumbotron>
             <div>
               <Input
@@ -143,6 +145,7 @@ class Products extends Component {
               >
                 submit product!
               </FormBtn >
+
 
               <br />
               <br />
