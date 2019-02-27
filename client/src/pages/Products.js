@@ -8,6 +8,7 @@ import Navigation from "../components/Navigation";
 import { Col, Row, Container } from "../components/Grid";
 //import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import "../styles/products.css";
 
 class Products extends Component {
   state = {
@@ -70,7 +71,7 @@ class Products extends Component {
         <Col size="md-1"></Col>
         <Col size="md-10">
             <Jumbotron>
-              <h1>add your products, gorgeous:</h1>
+              <h1 class="formintro">add your <br/> products, gorgeous:</h1>
             </Jumbotron>
             <form>
               <Input
@@ -115,7 +116,7 @@ class Products extends Component {
                 disabled={!(this.state.product && this.state.product_brand && this.state.product_price && this.state.product_shade && this.state.product_type && this.state.product_note)}
                 onClick={this.handleFormSubmit}
               >
-                submit product!
+                add
               </FormBtn>
               <br/>
                 <br/>
