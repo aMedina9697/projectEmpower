@@ -15,6 +15,7 @@ const SignInPage = () => (
   <div>
     <img src={logo} id="logoPic" alt="logo" />
     <h1 id="greeting">hello, gorgeous</h1>
+    <p>your beauty products, forever organized and accessible</p>
     <SignInForm />
     <PasswordForgetLink />
     <SignUpLink />
@@ -77,8 +78,8 @@ class SignInFormBase extends Component {
         />
 
 
-        <br/>
-        <button disabled={isInvalid} type="submit" id ="inbutt" class="signbutt">
+        <br />
+        <button disabled={isInvalid} type="submit" id="inbutt" class="signbutt">
           sign in
         </button>
 
@@ -90,9 +91,9 @@ class SignInFormBase extends Component {
 const SignInLink = () => (
 
   <div id="backToProf">
-   <button class="inClass" id="signId"><Link to={ROUTES.SIGN_IN}>back to sign in.</Link></button>
-   </div>
- );
+    <button class="inClass" id="signId"><Link to={ROUTES.SIGN_IN}>back to sign in.</Link></button>
+  </div>
+);
 
 
 const SignInForm = compose(

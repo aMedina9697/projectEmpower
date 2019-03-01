@@ -1,0 +1,26 @@
+button {
+    border-radius: 25px;
+    background: transparent;
+    padding-bottom: 7px;
+}
+
+input {
+    background: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #e6ebe0;
+}
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #e6ebe0;
+    font-size: 90px;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-shadow:
+    0px 4px 3px #5d576b,
+    0px 8px 13px #5d576b,
+    0px 18px 23px #5d576b;
+    margin-bottom: 10%;
+}
