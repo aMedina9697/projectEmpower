@@ -1,0 +1,20 @@
+#resetPasswordbutt{
+    width: 60%;
+    background: #5d576b;
+    color: #e6ebe0;
+    outline: none;
+    border: none;
+}
+button {
+    border-radius: 25px;
+    background: transparent;
+    padding-bottom: 7px;
+}
+
+input {
+    background: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #e6ebe0;
+}
