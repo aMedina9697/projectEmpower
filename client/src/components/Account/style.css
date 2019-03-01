@@ -1,4 +1,4 @@
-h1{
+h3{
     font-family: 'Dancing Script', cursive;
     color: #e6ebe0;
     font-size: 60px;
@@ -9,4 +9,8 @@ h1{
     0px 4px 3px #5d576b,
     0px 8px 13px #5d576b,
     0px 18px 23px #5d576b;
+}
+h4{
+    color: #5d576b;
+    font-size: 30px;
 }
