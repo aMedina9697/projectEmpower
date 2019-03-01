@@ -4,12 +4,15 @@ import '../SignIn/SignIn.css';
 import "./style.css";
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
+import { SignInLink } from '../SignIn';
+
 
 const PasswordForgetPage = () => (
-  <div>
-    <h1>forgot password</h1>
-    <PasswordForgetForm />
-  </div>
+    <div>
+      <h1>forgot password</h1>
+      <PasswordForgetForm />
+      <SignInLink />
+    </div>
 );
 
 const INITIAL_STATE = {
@@ -57,7 +60,11 @@ class PasswordForgetFormBase extends Component {
           type="text"
           placeholder="email address"
         />
-        <button disabled={isInvalid} type="submit">
+        <br> 
+        </br> 
+        <br> 
+        </br>
+        <button disabled={isInvalid} type="submit" id="resetbutt">
           reset my password
         </button>
 

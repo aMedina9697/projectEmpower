@@ -50,6 +50,13 @@ button {
     outline: none;
     border: none;
 }
+#resetbutt {
+    width: 60%;
+    background: #5d576b;
+    color: #e6ebe0;
+    outline: none;
+    border: none;   
+}
 
 #inbutt {
     margin-top: 7%;
