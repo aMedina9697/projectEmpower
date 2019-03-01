@@ -6,7 +6,7 @@ import * as ROUTES from '../../constants/routes';
 import user from "./usercircle.png";
 
 import { AuthUserContext } from '../Session';
-
+  
 const Navigation = () => (
   <div>
     <AuthUserContext.Consumer>
