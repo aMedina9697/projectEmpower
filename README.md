@@ -32,7 +32,7 @@ Any makeup fan can relate to the issue of trying to recall information of the va
 Front and Backend:
 
 Theo- React routing and app set up, connecting front end and backend with Mongo, CSS styling
-Kayla- React Routing, modals and rendering information in nested React components, CSS styling
+Kayla- React Routing, modals and rendering information in nested React components, CSS styling, heroku deplyment
 
 Backend:
 Layla- Mongo seeds, Mongo DB, popup
