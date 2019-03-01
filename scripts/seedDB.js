@@ -1,12 +1,10 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-// This file empties the Products collection and inserts the products below
 
 mongoose.connect(
   process.env.MONGODB_URI ||
   "mongodb://localhost/products"
-  //"mongodb://project3:password1@ds237955.mlab.com:37955/heroku_gszd7s48"
 );
 
 const productSeed = [
@@ -51,12 +49,22 @@ const productSeed = [
     "product_note": "smells weird but works weel"
   },
   {
-    "product": "All Nighter Setting Spray",
-    "product_brand": "Urban Decay",
-    "product_price": 32.00,
-    "product_shade": "16oz",
-    "product_type": "Skin",
-    "product_note": "expensive but holds so well"
+
+    product: "The Cali Kit",
+  product_brand: "Smashbox",
+  product_price: 39.00,
+  product_shade: "Contour Kit",
+  product_type: "Cheek",
+  product_note: ""
+  },
+  {
+    product: "All Nighter Setting Spray",
+  product_brand: "Urban Decay",
+  product_price:32.00,
+  product_shade: "16oz",
+  product_type: "Skin",
+  product_note: "expensive but holds so well"
+
   },
   {
     "product": "Naked Pallette",
@@ -90,7 +98,16 @@ const productSeed = [
     "product_type": "Eyes",
     "product_note": "double up for extra volume"
   },
+  
   {
+    product: "Butter Bronzer",
+  product_brand: "Physicians Formula",
+  product_price:14.99,
+  product_shade: "Sunkissed",
+  product_type: "Cheek",
+  product_note: "summer shade"
+  },
+ 
     "product": "Powder Blush",
     "product_brand": "Mac",
     "product_price": 24.00,
@@ -163,12 +180,21 @@ const productSeed = [
     "product_note": "good for a night out and intense brows"
   },
   {
-    "product": "Lipstick Matte",
-    "product_brand": "Mac",
-    "product_price": 16.00,
-    "product_shade": "Ruby Woo",
-    "product_type": "Lips",
-    "product_note": "very Taylor Swift-esque shade"
+    product: "24/7 Glide On Lip Pencil",
+  product_brand: "Urban Decay",
+  product_price:21.00,
+  product_shade: "Manic",
+  product_type: "Lips",
+  product_note: ""
+  },
+  {
+    product: "Lipstick Matte",
+  product_brand: "Mac",
+  product_price: 16.00,
+  product_shade: "Ruby Woo",
+  product_type: "Lips",
+  product_note: "very Taylor Swift-esque shade"
+
   },
   {
     "product": "Lip Kit",
@@ -187,6 +213,7 @@ const productSeed = [
     "product_note": ""
   },
   {
+
     "product": "Flower Balm",
     "product_brand": "Winky Lux",
     "product_price": 14.00,
@@ -194,14 +221,7 @@ const productSeed = [
     "product_type": "Lips",
     "product_note": "really moisturizing"
   },
-  {
-    "product": "Flower Balm",
-    "product_brand": "Winky Lux",
-    "product_price": 14.00,
-    "product_shade": "Blue",
-    "product_type": "Lips",
-    "product_note": "really moisturizing"
-  },
+
 ];
 
 db.Product
