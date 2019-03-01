@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { AuthUserContext } from '../Session';
-import { PasswordForgetForm } from '../PasswordForget';
+// import { PasswordForgetForm } from '../PasswordForget';
 import PasswordChangeForm from '../PasswordChange';
 import { withAuthorization } from '../Session';
 import Nav from "../Nav";
@@ -10,24 +10,16 @@ import { renderComponent } from 'recompose';
 import logo from "./logo.png";
 
 const AccountPage = () => (
-  <div>
-    <img src={logo} id="logoPic" alt="logo" />
-    <AuthUserContext.Consumer>
-      {authUser => (
-        <div>
-          <h1>your account</h1>
+  <AuthUserContext.Consumer>
+    {authUser => (
+      <div>
+        <h1>Account: {authUser.email}</h1>
+        {/* <PasswordForgetForm /> */}
+        <PasswordChangeForm />
+      </div>
+    )}
+  </AuthUserContext.Consumer>
 
-          <h3>{authUser.email}</h3>
-          {/* <PasswordForgetForm /> */}
-          <br>
-          </br>
-          <PasswordChangeForm />
-        </div>
-      )}
-
-    </AuthUserContext.Consumer>
-    <Nav />
-  </div>
 );
 
 // render() {
