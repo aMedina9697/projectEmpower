@@ -8,6 +8,8 @@ https://docs.google.com/presentation/d/1xjpct-FOrpIgSCGQd_jEjUxX1-E-C66Xbq3pYZAS
 
 This is a Node/Express/React app designed for folks in need of easy inventory of their personal makeup preferences. Hello gorgeous has a face map for looking at products sorted by facial features and a notes page to keep more detailed thoughts by product. Users with an easy way to keep track of previously used makeup products-- particularly brand, name, shade of thier favorite products-- should never find themselves at a loss for what to buy in the makeup aisle!
 
+![hompage](./appland.png)
+
 ## What problem does it solve?
 
 Any makeup fan can relate to the issue of trying to recall information of the various makeup products they personally use. Hello georgeous helps users log what they have purchased in the past, whether a product is worth buying again, their shade and so on. Ideally the app future development would employ type completion or a barcode reader to assist users with form completion while they enter their products to the database, so they do not ned to devote massive amounts of time to managing their makeups. 
