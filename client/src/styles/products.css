@@ -58,3 +58,10 @@
     margin-right: 2.5%;
     width: 95%;
 }
+.popup-content{
+    color:  #5d576b;
+    background-color:#e6ebe0!important;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 8px;
+}
